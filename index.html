@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="demo.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="./logo.png" alt="tiidelab_logo" />
+        <div>
+          <p class="h1">Student Registration Form</p>
+          <p>
+            Fill out the form to apply for the training courses. You can
+            consider your application accepted after you receive a confirmation
+            email.
+          </p>
+        </div>
+      </header>
+
+      <div>
+        <section class="student">
+          <h2>Student Information</h2>
+          <form>
+            <div class="row1">
+              <input
+                type="text"
+                name="firstName"
+                placeholder="First Name"
+                required
+              />
+              <input
+                type="text"
+                name="middleName"
+                placeholder="Middle Name"
+                required
+              />
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Last Name"
+                required
+              />
+            </div>
+            <div class="row2">
+              <input
+                type="text"
+                onfocus="(this.type='date')"
+                onblur="(this.type='text')"
+                placeholder="Date of Birth"
+              />
+              <input
+                type="text"
+                name="studentID"
+                placeholder="Student ID"
+                required
+              />
+            </div>
+          </form>
+        </section>
+
+        <section class="address">
+          <h2>Address</h2>
+          <form>
+            <div class="row6">
+              <input type="text" placeholder="Street Address" name="street" />
+            </div>
+
+            <div class="row3">
+              <input type="text" placeholder="City" name="city" />
+              <input type="text" placeholder="State" name="state" />
+            </div>
+            <div class="row4">
+              <input type="text" placeholder="Country" name="country" />
+              <input type="text" placeholder="Zip Code" name="zipCode" />
+            </div>
+          </form>
+        </section>
+
+        <section class="contact">
+          <h2>Contact Information</h2>
+          <form>
+            <div class="row5">
+              <input type="email" name="email" placeholder="E-mail" />
+              <input
+                type="text"
+                name="phoneNumber"
+                placeholder="Phone Number"
+              />
+            </div>
+          </form>
+        </section>
+
+        <section class="courses">
+          <h2>Courses</h2>
+          <div id="recordsContainer"></div>
+          <div class="bod">
+            <input
+              type="button"
+              value="+   Add New Record"
+              onclick="addRecord()"
+              id="add"
+            />
+            <div class="course">
+              <select name="course" id="course">
+                <option value="" disabled selected>Course</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="English Language">English Language</option>
+                <option value="Physics">Physics</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Biology">Biology</option>
+              </select>
+
+              <select id="level" name="level">
+                <option value="" disabled selected>Level</option>
+                <option value="100l">100l</option>
+                <option value="200l">200l</option>
+                <option value="300l">300l</option>
+                <option value="400l">400l</option>
+              </select>
+
+              <select id="language" name="language">
+                <option value="" disabled selected>Language</option>
+                <option value="Yoruba">Yoruba</option>
+                <option value="Igbo">Igbo</option>
+                <option value="Hausa">Hausa</option>
+              </select>
+
+              <input type="date" id="startDate" />
+            </div>
+          </div>
+          <div class="row7">
+            <textarea
+              name="comment"
+              id="comments"
+              cols="30"
+              rows="10"
+              placeholder="Comments"
+            >
+            </textarea>
+          </div>
+        </section>
+
+        <section class="row8">
+          <button type="submit" onclick="validateForm" class="submit">
+            SUBMIT REQUEST
+          </button>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
